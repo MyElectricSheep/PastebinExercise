@@ -1,19 +1,23 @@
 import React from "react";
 import "./styles.css";
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
+      <img
+        className="logo"
+        src="http://www.userlogos.org/files/logos/inductiveload/Pastebin.png"
+        alt="pastebin"
+        width="200px"
+      />
       <h1>
         <a href="/instructions.html"> instructions </a>
       </h1>
       <br />
-      <img
-        className="logo"
-        src="https://pastebin.com/i/pastebin_logo_side_outline.png"
-        alt="pastebin"
-      />
-      <form className="col-10 offset-1">
+      <form
+        className="col-10 offset-1"
+      >
         <div className="form-group">
           <label htmlFor="api_paste_name">Filename</label>
           <input
@@ -29,18 +33,20 @@ function App() {
             className="custom-select"
             id="api_paste_expire_date"
             name="api_paste_expire_date"
+            defaultValue="choose"
           >
-            <option value="10M" selected>
-              10 Minutes
+            <option value="choose" disabled>
+              Please select
             </option>
+            <option value="10M">10 Minutes</option>
             <option value="1H">1 Hour</option>
             <option value="1D">1 Day</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="api_paste_code">Code</label>
+        <div className="form-group">
+          <label htmlFor="api_paste_code">Code</label>
           <textarea
-            class="form-control"
+            className="form-control"
             id="api_paste_code"
             name="api_paste_code"
             rows="3"
@@ -52,17 +58,22 @@ function App() {
         <input
           type="hidden"
           name="api_dev_key"
-          value="dc2d94ed4b463f7ee5e73cb4fac5a18f"
+          // Alternate API Key
+          // value="10d0f6cee26d024fa57e968ab041a14a"
+          value="UfE_u9upiZ_QiNetFmqKl0sORiMtDrtq"
         />
         <div className="form-group">
           <button type="submit" className="btn btn-info">
             Submit
           </button>
         </div>
-        <p>Your link is: ~~~~</p>
+        <p>
+          Your link is:
+          "~~~~"
+        </p>
       </form>
     </div>
   );
-}
+};
 
 export default App;

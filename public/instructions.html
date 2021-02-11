@@ -1,64 +1,71 @@
-<h1 class="code-line">Pastebin - <a href="/">back</a></h1>
-<p class="has-line-data">
+<h1>Pastebin - <a href="/">back</a></h1>
+<p>
   <img
     src="https://media.giphy.com/media/3oKGzvg3gGxSS3O38A/giphy.gif"
     alt=""
   />
 </p>
-<h2 class="code-line">Goal</h2>
-<p class="has-line-data">
-  Block the submit if the form is empty and display the created link.
+<h2>Goal</h2>
+<p>Use the <a target="_blank" href="https://pastebin.com/doc_api"
+  >Pastebin</a> API to send a snippet of text/code to be hosted by Pastebin</p>
+<p>
+  Block the submit if the form is empty; otherwise, send the data to Pastebin, and display the returned link.
 </p>
-<h2 class="code-line">To do</h2>
-<ol start="1">
-  <li class="has-line-data">
-    Transform the component into a <strong>class</strong>
-  </li>
-  <li class="has-line-data">
+<h2>To do</h2>
+<ol>
+  <li>
     Listen the submit event of the form (
     <a target="_blank" href="https://reactjs.org/docs/forms.html">help</a>)
   </li>
-  <li class="has-line-data">
-    Prevent the refresh of the page with{" "}
+  <li>
+    Prevent the refresh of the page with
     <a
       target="_blank"
       href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"
     >
       PreventDefault() </a
-    >{" "} (<a
+    > (<a
       target="_blank"
       href="https://reactjs.org/docs/handling-events.html"
       >help</a
     >)
   </li>
-  <li class="has-line-data">
-    Keep the value of <code>filename</code>, <code>expiration</code> &amp;{" "}
+  <li>
+    Keep the value of <code>filename</code>, <code>expiration</code> &amp;
     <code>code</code> in the state
   </li>
-  <li class="has-line-data">
-    On submit, check if any property of the state (<code>filename</code>,{" "}
+  <li>
+    On submit, check if any property of the state (<code>filename</code>,
     <code>expiration</code> &amp; <code>code</code>) is empty, if not submit the
     form
   </li>
-  <li class="has-line-data">
+  <li>
     If one element is empty, display a message
   </li>
-  <li class="has-line-data">
+  <li>
     Replace <code>~~~~</code> by the generated link given by the API
   </li>
 </ol>
-<p class="has-line-data">
-  On this exercise, you can use{" "}
+<p>
+  On this exercise, you can use
   <a
     target="_blank"
     href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
   >
     Fetch </a
-  >{" "} or <a target="_blank" href="https://github.com/axios/axios">Axios</a>.
+  > or <a target="_blank" href="https://github.com/axios/axios">Axios</a>.
 </p>
-<p class="has-line-data">
-  You can find the API documentation here:{" "}
-  <a target="_blank" href="https://pastebin.com/api"
-    >https://pastebin.com/api</a
+<p>
+  You can find the API documentation here:
+  <a target="_blank" href="https://pastebin.com/doc_api"
+    >https://pastebin.com/doc_api</a
   >
+</p>
+<p>
+  Note1: You <strong>DO NOT</strong> to create an API key with Pastebin to solve this exercise. If you look inside App.js; the key is already provided to you under the <code>&lt;input&gt;</code> with a name of <code>api_dev_key</code>; alongside with other optional parameters you can use with the API (like <code>api_paste_private</code>). How do you get access to those though?
+</p>
+<p>
+  Note2: this API has limitations. To go around those, and only for the purpose of this exercise, we use a CORS proxy to bypass those limitations
+  <a target="_blank" href="https://cors-anywhere.herokuapp.com/corsdemo"
+    >Click here</a> and click on the <code>Request temporary access to the demo server</code> button to be able to use the API. You'll get 50 hits to the API/hour! Use them wisely!
 </p>
